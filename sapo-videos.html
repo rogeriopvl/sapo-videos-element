@@ -1,0 +1,65 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <sapo-videos></sapo-videos>
+
+@element sapo-videos
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://rogeriopvl.github.io/sapo-videos
+-->
+<polymer-element name="sapo-videos" attributes="videourl container hd">
+
+  <template>
+
+    <link rel="stylesheet" href="sapo-videos.css" />
+
+    <content></content>
+
+  </template>
+
+  <script>
+
+    Polymer('sapo-videos', {
+        videourl: null,
+        width: '500',
+        height: '436',
+        container: null,
+
+        ready: function () {
+          if (this.videourl) {
+            this.buildEmbed();
+          }
+        },
+
+        buildEmbed: function () {
+          var iframe = document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.src = '//videos.sapo.pt/playhtml?file=' + this.videourl + '/mov/1';
+
+          if (this.hd) {
+            iframe.src += '&quality=hd';
+          }
+
+          iframe.width = this.width;
+          iframe.height = this.height;
+
+          this.insertEmbed(iframe);
+        },
+
+        insertEmbed: function (iframe) {
+          if (this.container) {
+            var el;
+            el = document.querySelector(this.container);
+            el.appendChild(iframe);
+          }
+        }
+    });
+
+  </script>
+
+</polymer-element>
