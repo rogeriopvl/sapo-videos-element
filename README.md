@@ -1,5 +1,4 @@
-<sapo-videos>
-================
+# &lt;sapo-videos&gt;
 
 This is a web component for embedding videos from [Sapo Vídeos](http://videos.sapo.pt).
 
