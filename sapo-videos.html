@@ -1,22 +1,26 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 
 <!--
-Element providing solution to no problem in particular.
+Element that embeds videos from Sapo Videos
 
 ##### Example
 
-    <sapo-videos></sapo-videos>
+    <sapo-videos container="#video-container" videourl="..."></sapo-videos>
 
 @element sapo-videos
-@blurb Element providing solution to no problem in particular.
+@blurb Element that embeds videos from Sapo Videos
 @status alpha
-@homepage http://rogeriopvl.github.io/sapo-videos
+@homepage http://rogeriopvl.github.io/sapo-videos-element
 -->
 <polymer-element name="sapo-videos" attributes="videourl container hd">
 
   <template>
 
-    <link rel="stylesheet" href="sapo-videos.css" />
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
 
     <content></content>
 
