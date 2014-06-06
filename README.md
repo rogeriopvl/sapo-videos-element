@@ -1,8 +1,16 @@
-sapo-videos
+<sapo-videos>
 ================
 
-See the [component page](http://rogeriopvl.github.io/sapo-videos) for more information.
+This is a web component for embedding videos from [Sapo Vídeos](http://videos.sapo.pt).
 
-## Getting Started
+## Usage
 
-We've put together a [guide for sapo-videos](http://www.polymer-project.org/docs/start/reusableelements.html) to help get you rolling.
+To use this component just add the following markup to your HTML:
+
+    <sapo-videos container="#video-container" videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"></sapo-videos>
+
+    <div id="video-container"></div>
+
+## LICENSE
+
+MIT License
