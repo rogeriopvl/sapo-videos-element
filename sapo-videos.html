@@ -60,6 +60,12 @@ Element that embeds videos from Sapo Videos
             var el;
             el = document.querySelector(this.container);
             el.appendChild(iframe);
+          } else {
+            if (this.parentNode.lastChild == this) {
+              this.parentNode.appendChild(iframe);
+            } else {
+              this.parentNode.insertBefore(iframe, this.nextSibling);
+            }
           }
         }
     });
