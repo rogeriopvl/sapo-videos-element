@@ -2,6 +2,12 @@
 
 This is a web component for embedding videos from [Sapo Vídeos](http://videos.sapo.pt).
 
+Here's a [live demo](http://rogeriopvl.github.io/sapo-videos-element).
+
+## Install
+
+    bower install sapo-videos-element
+
 ## Usage
 
 To use this component just add the following markup to your HTML:
