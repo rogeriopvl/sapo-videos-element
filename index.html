@@ -1,22 +1,67 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset=utf-8>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>sapo-videos Demo</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ink/3.0.2/css/ink.min.css">
+  <style>
+    body {
+      font-weight: 300;
+    }
+
+    .code code {
+      background-color: #eee;
+      padding: 1em;
+    }
+  </style>
 
   <script src="bower_components/platform/platform.js"></script>
   <link rel="import" href="src/sapo-videos.html">
 
 </head>
 <body unresolved>
+  <div class="ink-grid">
 
-  <p>A <code>sapo-videos</code> web component looks like this:</p>
+    <header class="vertical-space">
+      <h1><code>&lt;sapo-videos&gt;</code> web component</h1>
+    </header>
 
-  <sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"></sapo-videos>
+    <div class="content">
 
-  <p>And with a custom container: </p>
-  <sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl" container="#video-container"></sapo-videos>
-  <div id="video-container"></div>
+      <p>This is how you embed a video from SAPO Vídeos using <a href="http://webcomponents.org/">web components</a> (through <a href="http://polymer-project.org">Polymer</a>):</p>
+
+      <div class="code">
+        <pre><code>&lt;sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"&gt;&lt;/sapo-videos&gt;</code></pre>
+      </div>
+
+      <p class="vertical-space">A <code>sapo-videos</code> web component looks like this:</p>
+
+      <sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl" container="#video-container"></sapo-videos>
+      <div id="video-container"></div>
+
+      <div class="vertical-space">
+        <h3>API</h3>
+
+        <h4>Available attributes</h4>
+
+        <ul>
+          <li><code>videourl</code> (mandatory) - The URL of the video to embed</li>
+          <li><code>container</code> (optional) - Selector with the element where the embed will be inserted. If not provided, the embed will be appended after the <code>sapo-videos</code> element</li>
+          <li><code>width</code> (optional)</li>
+          <li><code>height</code> (optional)</li>
+          <li><code>hd</code> (optional)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <footer class="vertical-space">
+      <p>Check out the source code at <a href="http://github.com/rogeriopvl/sapo-videos-element">http://github.com/rogeriopvl/sapo-videos-element</a></p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
