@@ -10,12 +10,9 @@ module.exports = function(grunt) {
       }
     },
     'gh-pages': {
-      options: {
-        clone: 'bower_components/sapo-videos-element'
-      },
+      options: {},
       src: [
         'bower_components/**/*',
-        '!bower_components/sapo-videos-element/**/*',
         'demo/*', 'src/*', 'index.html'
       ]
     },
