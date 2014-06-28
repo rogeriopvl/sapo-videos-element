@@ -2,14 +2,21 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>sapo-videos Demo</title>
+
   <script src="bower_components/platform/platform.js"></script>
-  <link rel="import" href="bower_components/polymer/polymer.html">
-  <link rel="import" href="bower_components/core-component-page/core-component-page.html">
+  <link rel="import" href="src/sapo-videos.html">
 
 </head>
 <body unresolved>
 
-  <core-component-page></core-component-page>
+  <p>A <code>sapo-videos</code> web component looks like this:</p>
+
+  <sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"></sapo-videos>
+
+  <p>And with a custom container: </p>
+  <sapo-videos videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl" container="#video-container"></sapo-videos>
+  <div id="video-container"></div>
 
 </body>
 </html>
