@@ -1,6 +1,6 @@
 {
   "name": "sapo-videos-element",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Polymer web component for embedding videos from sapo videos\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
