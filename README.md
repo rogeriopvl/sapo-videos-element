@@ -12,7 +12,7 @@ Here's a [live demo](http://rogeriopvl.github.io/sapo-videos-element).
 
 To use this component just add the following markup to your HTML:
 
-    <sapo-videos container="#video-container" videourl="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"></sapo-videos>
+    <sapo-videos container="#video-container" url="http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl"></sapo-videos>
 
     <div id="video-container"></div>
 

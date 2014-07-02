@@ -5,14 +5,14 @@ Element that embeds videos from Sapo Videos
 
 ##### Example
 
-    <sapo-videos container="#video-container" videourl="..."></sapo-videos>
+    <sapo-videos container="#video-container" url="..."></sapo-videos>
 
 @element sapo-videos
 @blurb Element that embeds videos from Sapo Videos
 @status alpha
 @homepage http://rogeriopvl.github.io/sapo-videos-element
 -->
-<polymer-element name="sapo-videos" attributes="videourl container width height hd">
+<polymer-element name="sapo-videos" attributes="url container width height hd">
 
   <template>
 
@@ -29,21 +29,19 @@ Element that embeds videos from Sapo Videos
   <script>
 
     Polymer('sapo-videos', {
-        videourl: null,
+        url: 'http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl',
         width: '500',
         height: '436',
         container: null,
 
         ready: function () {
-          if (this.videourl) {
-            this.buildEmbed();
-          }
+          this.buildEmbed();
         },
 
         buildEmbed: function () {
           var iframe = document.createElement('iframe');
           iframe.style.border = 'none';
-          iframe.src = '//videos.sapo.pt/playhtml?file=' + this.videourl + '/mov/1';
+          iframe.src = '//videos.sapo.pt/playhtml?file=' + this.url + '/mov/1';
 
           if (this.hd) {
             iframe.src += '&quality=hd';
