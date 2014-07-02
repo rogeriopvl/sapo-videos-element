@@ -30,9 +30,10 @@ Element that embeds videos from Sapo Videos
 
     Polymer('sapo-videos', {
         url: 'http://videos.sapo.pt/vz0UeKVkl92vQ2bDhIYl',
-        width: '500',
+        width: '580',
         height: '436',
         container: null,
+        hd: false,
 
         ready: function () {
           this.buildEmbed();
@@ -43,12 +44,13 @@ Element that embeds videos from Sapo Videos
           iframe.style.border = 'none';
           iframe.src = '//videos.sapo.pt/playhtml?file=' + this.url + '/mov/1';
 
-          if (this.hd) {
-            iframe.src += '&quality=hd';
-          }
-
           iframe.width = this.width;
           iframe.height = this.height;
+
+          if (this.hd) {
+            iframe.src += '&quality=hd';
+            iframe.height = '326';
+          }
 
           this.insertEmbed(iframe);
         },
