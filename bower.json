@@ -1,14 +1,14 @@
 {
   "name": "sapo-videos-element",
   "version": "0.2.0",
-  "keywords": "sapo, videos, sapovideos, seed, polymer, web-components",
+  "keywords": "sapo, videos, sapovideos, web-components",
   "main": "dist/sapo-videos.html",
   "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components"
-    ],
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.1"
+    "webcomponentsjs": "~0.5.4"
   }
 }

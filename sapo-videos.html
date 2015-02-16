@@ -1,0 +1,60 @@
+<!--
+Element that embeds videos from Sapo Videos
+
+##### Example
+
+    <sapo-videos container="#video-container" url="..."></sapo-videos>
+
+@element sapo-videos
+@blurb Element that embeds videos from Sapo Videos
+@status alpha
+@homepage http://rogeriopvl.github.io/sapo-videos-element
+-->
+<script>
+  (function () {
+    var SapoVideosProto = Object.create(HTMLElement.prototype);
+
+    SapoVideosProto.createdCallback = function () {
+      var opts = {
+        url: this.getAttribute('url'),
+        width: this.getAttribute('width') || '580',
+        height: this.getAttribute('height') || '436',
+        hd: this.getAttribute('hd') || false
+      };
+      this.buildEmbed(opts);
+    };
+
+    SapoVideosProto.buildEmbed = function (opts) {
+      var iframe = document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.src = '//videos.sapo.pt/playhtml?file=' + opts.url + '/mov/1';
+
+      iframe.width = opts.width;
+      iframe.height = opts.height;
+
+      if (opts.hd) {
+        iframe.src += '&quality=hd';
+        iframe.height = '326';
+      }
+
+      this.insertEmbed(iframe);
+    };
+
+    SapoVideosProto.insertEmbed = function (iframe) {
+      var container = this.getAttribute('container');
+      if (container) {
+        var el;
+        el = document.querySelector(container);
+        el.appendChild(iframe);
+      } else {
+        if (this.parentNode.lastChild == this) {
+          this.parentNode.appendChild(iframe);
+        } else {
+          this.parentNode.insertBefore(iframe, this.nextSibling);
+        }
+      }
+    };
+
+    document.registerElement('sapo-videos', { prototype: SapoVideosProto });
+  })();
+</script>
