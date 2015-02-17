@@ -1,8 +1,8 @@
 {
   "name": "sapo-videos-element",
   "version": "0.2.0",
-  "keywords": "sapo, videos, sapovideos, web-components",
-  "main": "dist/sapo-videos.html",
+  "keywords": "sapo, video, sapovideos, web-components, web, components, custom, elements",
+  "main": "sapo-videos.html",
   "ignore": [
     "**/.*",
     "node_modules",

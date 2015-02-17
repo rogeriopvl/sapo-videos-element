@@ -7,7 +7,7 @@ Element that embeds videos from Sapo Videos
 
 @element sapo-videos
 @blurb Element that embeds videos from Sapo Videos
-@status alpha
+@status stable
 @homepage http://rogeriopvl.github.io/sapo-videos-element
 -->
 <script>
@@ -47,11 +47,13 @@ Element that embeds videos from Sapo Videos
         el = document.querySelector(container);
         el.appendChild(iframe);
       } else {
-        if (this.parentNode.lastChild == this) {
+        var shadow = this.createShadowRoot();
+        shadow.appendChild(iframe);
+        /*if (this.parentNode.lastChild == this) {
           this.parentNode.appendChild(iframe);
         } else {
           this.parentNode.insertBefore(iframe, this.nextSibling);
-        }
+        }*/
       }
     };
 
