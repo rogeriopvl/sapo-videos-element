@@ -1,6 +1,6 @@
 {
   "name": "sapo-videos-element",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "keywords": "sapo, video, sapovideos, web-components, web, components, custom, elements",
   "main": "sapo-videos.html",
   "ignore": [
